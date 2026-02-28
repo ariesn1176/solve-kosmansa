@@ -13,9 +13,9 @@ warnings.filterwarnings('ignore')
 pd.options.display.float_format = '{:,.2f}'.format
 
 try:
-    df = pd.read_csv("/content/All24.csv", sep=";")
+    df = pd.read_csv("All24.csv", sep=";")
 except FileNotFoundError:
-    print("WARNING: File /content/All24.csv tidak ditemukan.")
+    print("WARNING: File All24.csv tidak ditemukan.")
     print("Membuat data dummy untuk menjalankan sisa script...")
     dates = pd.date_range(start='2024-01-01', end='2024-12-31', freq='D')
     products = ['Produk A', 'Produk B', 'Produk C']
